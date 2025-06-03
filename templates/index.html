@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>WasteWise Reporter</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Form Section -->
+    <section class="form-section">
+      <h2>Report Waste</h2>
+      <form method="POST" enctype="multipart/form-data">
+        <label for="description">Description:</label>
+        <textarea name="description" required></textarea>
+
+        <label for="address">Address:</label>
+        <input type="text" name="address" required />
+
+        <label for="image">Upload Image:</label>
+        <input type="file" name="image" accept="image/*" />
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <!-- Report List Section -->
+    <section class="report-list">
+      <h2>Reported Issues</h2>
+      {% for report in reports %}
+      <div class="report-card">
+        <p><strong>Description:</strong> {{ report[1] }}</p>
+        <p><strong>Address:</strong> {{ report[2] }}</p>
+        <p><strong>Date:</strong> {{ report[4] }}</p>
+        {% if report[3] %}
+          <img src="{{ url_for('static', filename=report[3].split('static/')[-1]) }}" alt="Report Image" />
+        {% endif %}
+        <!-- DELETE BUTTON -->
+        <form action="{{ url_for('delete_report', report_id=report[0]) }}" method="POST" style="margin-top: 1rem;">
+          <button type="submit" class="delete-btn">Delete</button>
+        </form>
+      </div>
+      {% endfor %}
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 WasteWise Reporter — Clean today, green tomorrow!</p>
+  </footer>
+</body>
+</html>
+
+

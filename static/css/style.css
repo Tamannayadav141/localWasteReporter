@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9d1;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.form-section {
+  flex: 1;
+  background-color: #d0f0c0;
+  padding: 2rem;
+  border-right: 4px solid #ffa500;
+}
+
+.form-section h2 {
+  color: #2e7d32;
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section input,
+.form-section textarea {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.form-section button {
+  background-color: #ffa500;
+  color: white;
+  padding: 0.7rem;
+  border: none;
+  cursor: pointer;
+}
+
+.report-list {
+  flex: 2;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.report-list h2 {
+  color: #388e3c;
+}
+
+.report-card {
+  background-color: #e8f5e9;
+  border: 1px solid #c8e6c9;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.report-card img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #d0f0c0;
+  font-size: 0.9rem;
+  color: #555;
+  border-top: 2px solid #ffa500;
+}
+.delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
