@@ -11,6 +11,7 @@ Local Waste Reporter is a lightweight Flask web application that allows users to
 - Built with Flask, HTML, CSS, and JavaScript 
 
 ## 📁 Project Structure
+```
 local-waste-reporter/
 │
 ├── app.py # Flask backend
@@ -19,6 +20,13 @@ local-waste-reporter/
 ├── /static/
 │ ├── styles.css # CSS styling
 │ └── script.js # JavaScript
+```
+
+## 💡 Future Enhancements
+
+- Add geolocation/map view
+- Export reports as PDF or Excel
+- Admin dashboard to manage and resolve reports
 ## 🚀 How to Run the Project
 
 Follow these steps to run the project on your local machine:
@@ -28,22 +36,24 @@ Follow these steps to run the project on your local machine:
 ```bash
 git clone https://github.com/Tamannayadav141/localWasteReporter.git
 cd localWasteReporter
+```
 
 2. Set Up a Virtual Environment (Optional)
+   ```
    python -m venv venv
       Then activate it:
 
       On Windows: venv\Scripts\activate
       On Mac/Linux:source venv/bin/activate
-3. Install Dependencies
+   ```
+4. Install Dependencies
+   ```
    pip install Flask
+   ```
 
 4.Run the Flask App
+```
   python app.py
+```
 
-## 💡 Future Enhancements
-
-- Add geolocation/map view
-- Export reports as PDF or Excel
-- Admin dashboard to manage and resolve reports
 
